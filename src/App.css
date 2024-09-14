@@ -1,0 +1,68 @@
+.header{
+    background: #343a40;
+    width: 100%;
+}
+
+
+.sidebar
+{
+    height: 87rem;
+    padding: 0;
+    
+}
+
+
+.mainArea
+{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+
+
+.categoryContainer
+{
+    margin: 1em;
+    border-radius: 10px;
+    text-align: center;
+    /* border: 5px solid; */
+}
+
+.categoryContainer:hover {
+    border: 1px solid rgb(63, 63, 63);
+
+}
+
+.categoryContainer:hover .child{
+    border: transparent
+}
+
+
+
+
+
+.FindARecipeCnt
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.Category_Window
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Find_recipe_div
+{
+    font-size: 1.5em;
+    margin: 1em 0;
+}
