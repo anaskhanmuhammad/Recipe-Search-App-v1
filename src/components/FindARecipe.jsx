@@ -1,20 +1,17 @@
+import { useContext } from "react";
 import Categories from "./Categories";
 import FindARecipeHeading from "./FindARecipeHeading";
-import { categoryContext } from "../store/Food-Recipe-store";
-import { useContext } from "react";
+import Foods from "./Foods";
+import { Context } from "../store/Food-Recipe-store";
 
 function FindARecipe(params) {
-  // const {RetrieveCategories} = useContext(categoryContext);
-
-  // RetrieveCategories();
+  const { FoodList } = useContext(Context);
 
   return (
     <>
-      <div className="Category_Window">
-        <FindARecipeHeading></FindARecipeHeading>
-        <div className="FindARecipeCnt">
-          <Categories></Categories>
-        </div>
+      <div className="FindARecipeCnt">
+        {FoodList.length === 0 && <Categories></Categories>}
+        {FoodList.length !== 0 && <Foods></Foods>}
       </div>
     </>
   );

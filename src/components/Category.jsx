@@ -1,7 +1,18 @@
+import { useContext } from "react";
+import { Context } from "../store/Food-Recipe-store";
+
 function Category({c}) {
+
+    const {RetrieveFood} = useContext(Context)
+
+    function HandleRetrieveFood(strCategory) {
+        RetrieveFood(strCategory);
+    }
+
+
   return (
     <>
-      <div class="card categoryContainer" style={{ width: "18rem" }}>
+      <div class="card categoryContainer" style={{ width: "18rem" }} onClick={() => {HandleRetrieveFood(c.strCategory)}}>
         <img
           src={c.strCategoryThumb}
           class="card-img-top"
